@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center
+            }
+
+            /*Set a style for all buttons*/ 
+            input[type=submit] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 8%;
+            }
+
+            /*Full-width input fields*/ 
+            input[type=text], input[type=password] {
+                width: 30%;
+                padding: 12px 20px;
+                margin: 8px 10px;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body style="text-align: center">
+        <h1>Yellow Moon Shop</h1>
+        <form action="MainController" method="POST">
+            <label for="txtEmail"><b>Email: </b></label>
+            <input type="text" name="txtEmail" value="" placeholder="Enter Email"/><br/>
+            <label for="txtEmail"><b>Password: </b></label>
+            <input type="password" name="txtPassword" value="" placeholder="Enter Password"/><br/>
+            <input type="submit" value="Login" name="btnAction"/>
+        </form>
+        <br/>
+        <a href="MainController?btnAction=Search">Return to home page</a><br/>
+        <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/YellowMoonShop/login-google&response_type=code
+    &client_id=856688289616-e521vj4emlmfp6lguvpe7b65e7sljvbh.apps.googleusercontent.com&approval_prompt=force">Login With Google</a>  
+    </body>
+</html>
